@@ -1,0 +1,125 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+}
+body{
+    background-color: white;
+    min-height: 100vh;
+    color: #424043;
+}
+.logo{
+    width: 40%;
+    max-width: 10em;
+    margin: 1em;
+}
+.home{
+    list-style: none;
+    margin: 1em;
+    font-size: 1.5em;
+}
+.index-nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1em;
+
+}
+.index-nav div{
+    font-size: 2em;
+    color: #750346;
+}
+.index-banner-text{
+    /* font-size: 20vw; */
+    margin-top: 10em;
+    animation: bottom-to-top 1100ms ease-in-out linear;
+    padding-left: 1em;
+}
+.index-banner-text li{
+    list-style: none;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+.index-banner-text li a{
+    text-decoration: none;
+    color: #424043;
+}
+.index-header{
+    height: 100vh;
+}
+.go-to-about:hover, .go-to-about:active, .go-to-work:hover, .go-to-work:active, .go-to-contact:active, .go-to-contact:hover{
+    animation: slide-in-color-shift 1000ms ease-in-out forwards;
+}
+.go-to-about a:hover, .go-to-about a:active{
+    animation: about-color-shift 1000ms ease-in-out forwards;
+}
+
+.go-to-work a:active, .go-to-work a:hover{
+    animation: work-color-shift 1000ms ease-in-out forwards;
+}
+
+.go-to-contact a:active, .go-to-contact a:hover{
+    animation: contact-color-shift 1000ms ease-in-out forwards;
+}
+
+@keyframes slide-in-color-shift{
+    0%{
+        transform: translateX(0);
+        
+    }
+    100%{
+        transform: translateX(2em);
+    }
+}
+@keyframes about-color-shift{
+    100%{
+        background-color: black;
+        color: white;
+    }
+}
+@keyframes work-color-shift{
+    100%{
+        color: white;
+        background-color: #1A2133;
+    }
+}
+@keyframes contact-color-shift{
+    100%{
+        background-color: #400615;
+        color: white;
+    }
+}
+@media screen and (min-width: 40em){
+    .index-banner-text{
+        margin-top: 4.5em;
+        padding-left: 5em;
+    }
+    .index-banner-text li{
+        font-size: 2.75em;
+        margin-bottom: 0.75em;
+    }
+}
+@media screen and (min-width: 70em){
+    .index-banner-text{
+        margin-top: 2em;
+        padding-left: 10em;
+    }
+    .index-banner-text li{
+        font-size: 3em;
+        margin-bottom: 0.5em;
+    }
+}
+@media screen and (min-width: 90em){
+    body{
+        background-color: white;
+    }
+    .index-banner-text li{
+        font-size: 4em;
+    }
+    .index-banner-text{
+        margin-top: 0.5em;
+        /* margin-bottom: 0.25em; */
+        padding-left: 12em;
+    }
+}

@@ -1,0 +1,113 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+}
+body{
+    background-color: #400615;
+    min-height: 100vh;
+    color: white;
+    
+}
+.logo{
+    width: 40%;
+    max-width: 10em;
+    margin: 1em;
+}
+.home{
+    color: white;
+    list-style: none;
+    margin: 1em;
+    font-size: 1.5em;
+}
+.home a{
+    text-decoration: none;
+    color: inherit;
+}
+.contact-nav{
+    display: flex;
+    justify-content: space-between;
+}
+.contact-banner-text{
+    color: white;
+    font-size: 3.75em;
+    /* font-size: 20vw; */
+    margin-top: 2.75em;
+    margin-left: 30px;
+    margin-right: 15px;
+    animation: bottom-to-top 1100ms ease-in-out forwards;
+}
+@keyframes bottom-to-top {
+    0%{
+        transform: translateY (0);
+    }
+    100%{
+        transform: translateY(-60px);
+    }
+}
+.contact-header{
+    margin-bottom: 2em;
+}
+.contact-content{
+    margin-left: 30px;
+    margin-right: 15px;
+    font-size: 1.5em;
+    margin-bottom: 5em;
+}
+.skills {
+    padding: 0;
+    margin-top: 2em;
+}
+.skills li{
+    list-style: none;
+    margin-bottom: 1em;
+    color: #F3ECDC;
+    font-weight: bold;
+}
+.skills li a{
+    text-decoration: none;
+    color: inherit;
+}
+@media screen and (min-width: 40em){
+    .contact-banner-text{
+        margin-top: 2.5em;
+        font-size: 6em;
+    }
+    .contact-content{
+        margin-left: 5.5em;
+        margin-right: 5.5em;
+    }
+    @keyframes bottom-to-top{
+    100%{
+        transform: translateY(-120px);
+    }
+}
+}
+@media screen and (min-width: 70em){
+    .contact-banner-text{
+        margin-left: 0.75em;
+        max-width: 7em;
+        font-size: 8em;
+    }
+    .contact-content{
+        margin-left: 9.5em;
+        margin-right: 9.5em;
+    }
+    @keyframes bottom-to-top{
+    100%{
+        transform: translateY(-180px);
+    }
+}
+}
+@media screen and (min-width: 90em){
+    .contact-banner-text{
+        max-width: 8em;
+        font-size: 9em;
+        margin-top: 2em;
+    }
+    .contact-content{
+        margin-left: 11.5em;
+        margin-right: 11.5em;
+    }
+}

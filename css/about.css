@@ -1,0 +1,112 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+}
+body{
+    background-color: black;
+    min-height: 100vh;
+    color: white;
+}
+.logo{
+    width: 40%;
+    max-width: 10em;
+    margin: 1em;
+}
+.home{
+    color: white;
+    list-style: none;
+    margin: 1em;
+    font-size: 1.5em;
+}
+.home a{
+    text-decoration: none;
+    color: inherit;
+}
+.about-nav{
+    display: flex;
+    justify-content: space-between;
+}
+.about-banner-text{
+    color: white;
+    font-size: 3.75em;
+    /* font-size: 20vw; */
+    margin-top: 2.75em;
+    margin-left: 30px;
+    margin-right: 15px;
+    animation: bottom-to-top 1100ms ease-in-out forwards;
+}
+@keyframes bottom-to-top {
+    0%{
+        transform: translateY (0);
+    }
+    100%{
+        transform: translateY(-60px);
+    }
+}
+.about-header{
+    height: 100vh;
+}
+.about-content{
+    margin-left: 30px;
+    margin-right: 15px;
+    font-size: 1.5em;
+    margin-bottom: 5em;
+}
+.skills {
+    padding: 0;
+}
+.skills li{
+    list-style: none;
+}
+.resume-link{
+    text-decoration: none;
+    color: #EEDBEB;
+    font-weight: bold;
+}
+@media screen and (min-width: 40em){
+    .about-banner-text{
+        margin-top: 2.5em;
+        font-size: 6em;
+    }
+    .about-content{
+        margin-left: 5.5em;
+        margin-right: 5.5em;
+    }
+    @keyframes bottom-to-top{
+    100%{
+        transform: translateY(-120px);
+    }
+}
+}
+@media screen and (min-width: 70em){
+    body{
+        background-color: black;
+    }
+    .about-banner-text{
+        margin-left: 0.75em;
+        max-width: 7em;
+        font-size: 8em;
+    }
+    .about-content{
+        margin-left: 9.5em;
+        margin-right: 9.5em;
+    }
+    @keyframes bottom-to-top{
+    100%{
+        transform: translateY(-180px);
+    }
+}
+}
+@media screen and (min-width: 90em){
+    .about-banner-text{
+        max-width: 8em;
+        font-size: 9em;
+        margin-top: 2em;
+    }
+    .about-content{
+        margin-left: 11.5em;
+        margin-right: 11.5em;
+    }
+}
